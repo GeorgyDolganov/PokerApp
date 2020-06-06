@@ -1,0 +1,96 @@
+$black: #4C3B4D;
+$green: #82968C;
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
+
+* {
+    font-family: 'Merriweather', serif;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+.header {
+    background-color: $black;
+    color: white;
+    padding: 20px;
+
+    .btn-box {
+        margin-top: 10px;
+    }
+}
+
+.table {
+    background-color: $green;
+    height: 100%;
+    display: flex;
+
+    .card {
+        height: 160px;
+        width: 110px;
+        background-size: contain;
+
+        +.card {
+            margin-left: 20px;
+        }
+
+        &-draft {
+            display: flex;
+            position: absolute;
+            margin: auto;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+}
+
+.player {
+    width: 33.3333333%;
+    display: flex;
+    flex-direction: column;
+    &-box {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+
+        .empty {
+            width: 33.3333333%;
+        }
+    }
+    .text{
+        margin: auto;
+        text-align: center;
+    }
+}
+button {
+    border: none;
+}
+
+.row {
+    display: flex;
+}
+
+.btn {
+    color: $black;
+    background-color: white;
+    border-radius: 4px;
+    padding: 10px;
+    transition: 0.15s;
+    text-decoration: none;
+
+    &:hover {
+        background-color: #ccc;
+    }
+
+    +.btn {
+        margin-left: 10px;
+    }
+}

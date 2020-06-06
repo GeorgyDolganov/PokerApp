@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, width=device-width, viewport-fit=cover"
+    />
+    <link rel="stylesheet" type="text/css" href="../../../css/index.css" />
+    <title>Стол крупье</title>
+  </head>
+  <body>
+    <div class="table">
+      <div class="card-draft">
+        <div
+          class="card"
+          style="background-image: url(../../../cards/10_of_clubs.svg);"
+        ></div>
+        <div
+          class="card"
+          style="background-image: url(../../../cards/ace_of_clubs.svg);"
+        ></div>
+        <div
+          class="card"
+          style="background-image: url(../../../cards/king_of_diamonds2.svg);"
+        ></div>
+        <div
+          class="card"
+          style="background-image: url(../../../cards/queen_of_spades2.svg);"
+        ></div>
+        <div
+          class="card"
+          style="background-image: url(../../../cards/6_of_spades.svg);"
+        ></div>
+      </div>
+      <div class="player-box">
+        <div class="player">
+          <div class="text">
+            <h3>Игрок 1</h3>
+            <h5>10 000$</h5>
+          </div>
+        </div>
+        <div class="player">
+          <div class="text">
+            <h3>Игрок 2</h3>
+            <h5>10 000$</h5>
+          </div>
+        </div>
+        <div class="player">
+          <div class="text">
+            <h3>Игрок 3</h3>
+            <h5>10 000$</h5>
+          </div>
+        </div>
+        <div class="player">
+          <div class="text">
+            <h3>Игрок 4</h3>
+            <h5>10 000$</h5>
+          </div>
+        </div>
+        <div class="empty"></div>
+        <div class="player">
+          <div class="text">
+            <h3>Игрок 5</h3>
+            <h5>10 000$</h5>
+          </div>
+        </div>
+        <div class="player">
+          <div class="text">
+            <h3>Игрок 6</h3>
+            <h5>10 000$</h5>
+          </div>
+        </div>
+        <div class="player">
+          <div class="text">
+            <h3>Игрок 7</h3>
+            <h5>10 000$</h5>
+          </div>
+        </div>
+        <div class="player">
+          <div class="text">
+            <h3>Игрок 8</h3>
+            <h5>10 000$</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="/cordova.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"
+    ></script>
+    <script type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+      document.addEventListener("deviceready", function () {
+        var socket = io.connect("http://localhost:3000");
+        socket.on("connect", function () {
+          socket.on("text", function (text) {
+            alert(text);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
