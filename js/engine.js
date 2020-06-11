@@ -5,16 +5,18 @@ Player = function (name) {
 var game = new StateMachine({
   init: "Idle",
   transitions: [
-    { name: "Play", from: "Idle", to: "Start" },
-    { name: "StartFirst", from: "Start", to: "FirstBet" },
-    { name: "DealFlop", from: "FirstBet", to: "FlopCards" },
-    { name: "DealTurn", from: "FlopCards", to: "TurnCard" },
-    { name: "DealRiver", from: "TurnCard", to: "RiverCard" },
-    { name: "Showdown", from: "RiverCard", to: "Results" },
-    { name: "NextGame", from: "Results", to: "Start" }
+    { name: "play", from: "Idle", to: "Start" },
+    { name: "startFirst", from: "Start", to: "FirstBet" },
+    { name: "dealFlop", from: "FirstBet", to: "FlopCards" },
+    { name: "dealTurn", from: "FlopCards", to: "TurnCard" },
+    { name: "dealRiver", from: "TurnCard", to: "RiverCard" },
+    { name: "showdown", from: "RiverCard", to: "Results" },
+    { name: "nextGame", from: "Results", to: "Start" }
   ],
   methods: {
-    onPlay: function () {},
+    onPlay: function () {
+      game.publish(EVENT.GAME_TABLE_DEAL_ALL);
+    },
     onStartFirst: function () {},
     onDealFlop: function () {},
     onDealTurn: function () {},
@@ -28,7 +30,8 @@ var EVENT = {
   PLAYER_FOLD: 0,
   PLAYER_CALL: 1,
   PLAYER_RAISE: 2,
-  GAME_DEAL_ALL: 3,
+  GAME_TABLE_DEAL_ALL: 3,
+  GAME_PLAYER_DEAL_ALL:4,
 };
 
 PubSub.enable(game);
@@ -36,10 +39,17 @@ PubSub.enable(game);
 game.subscribe(EVENT.PLAYER_FOLD, function (player) {});
 game.subscribe(EVENT.PLAYER_CALL, function (player) {});
 game.subscribe(EVENT.PLAYER_RAISE, function (player) {});
-game.subscribe(EVENT.GAME_DEAL_ALL, function (table) {
+game.subscribe(EVENT.GAME_TABLE_DEAL_ALL, function () {
   let cards = deck.deal(5);
   cards.forEach((card)=>{
-    let cardDraft = document.getElementById("card-draft")
+    let cardDraft = document.getElementById("table-draft")
+    cardDraft.insertAdjacentHTML('beforeend', GUI.getCardHTML(card));
+  })
+});
+game.subscribe(EVENT.GAME_PLAYER_DEAL_ALL, function () {
+  let cards = deck.deal(2);
+  cards.forEach((card)=>{
+    let cardDraft = document.getElementById("hand-draft")
     cardDraft.insertAdjacentHTML('beforeend', GUI.getCardHTML(card));
   })
 });
