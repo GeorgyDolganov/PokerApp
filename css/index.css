@@ -10,6 +10,7 @@ html {
 
 body {
   height: 100%;
+  overflow: hidden;
 }
 
 .header {
@@ -19,47 +20,6 @@ body {
 }
 .header .btn-box {
   margin-top: 10px;
-}
-
-.table {
-  background-color: #82968C;
-  height: 100%;
-  display: flex;
-}
-.table .card {
-  height: 160px;
-  width: 110px;
-  background-size: contain;
-}
-.table .card + .card {
-  margin-left: 20px;
-}
-.table .card-draft {
-  display: flex;
-  position: absolute;
-  margin: auto;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-}
-
-.player {
-  width: 33.3333333%;
-  display: flex;
-  flex-direction: column;
-}
-.player-box {
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-}
-.player-box .empty {
-  width: 33.3333333%;
-}
-.player .text {
-  margin: auto;
-  text-align: center;
 }
 
 button {
@@ -83,6 +43,57 @@ button {
 }
 .btn + .btn {
   margin-left: 10px;
+}
+
+.table {
+  background-color: #82968C;
+  height: 100%;
+  display: flex;
+}
+.table .card {
+  height: 154px;
+  width: 110px;
+  background-size: contain;
+}
+.table .card + .card {
+  margin-left: 10px;
+}
+.table .card-draft {
+  display: flex;
+  position: absolute;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.table .player {
+  width: 33.3333333%;
+  display: flex;
+  flex-direction: column;
+}
+.table .player-box {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.table .player-box .empty {
+  width: 33.3333333%;
+}
+.table .player .attributes {
+  margin: auto;
+}
+.table .player .text {
+  text-align: center;
+}
+.table .player .hand {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+.table .player .hand .card {
+  height: 115px;
+  width: 82px;
 }
 
 /*# sourceMappingURL=index.css.map */
