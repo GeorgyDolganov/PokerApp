@@ -9,25 +9,21 @@
     </head>
     <body>
         <div class="header">
-            <h1>PockerApp</h1>
+            <h1>Настройка игры</h1>
             <div class="row btn-box">
-                <a class="btn" href="screens/player/game/index.html">Игрок</a>
-                <a class="btn" href="screens/host/table/index.html">Крупье</a>
-                <a class="btn" href="screens/host/settings/index.html">Хост</a>
+                <a class="btn" href="player.html">Игрок</a>
+                <a class="btn" href="table.html">Крупье</a>
+            </div>
+            <div class="row btn-box">
+                <div class="btn" id="btn-start" onclick="startGame('btn-start');">Старт</a>
             </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
+        <script src="js/stateMachine.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script>
-            document.addEventListener('deviceready', function() {
-                var socket = io.connect('http://localhost:3000');
-                socket.on('connect', function() {
-                    socket.on('text', function(text) {
-                        alert(text);
-                    });
-                });
-            });
-        </script>
+        <script type="text/javascript" src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script type="text/javascript" src="js/utilites.js"></script>
+        <script type="text/javascript" src="js/admin.js"></script>
+        <script type="text/javascript" src="js/events.js"></script>
     </body>
 </html>

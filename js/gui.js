@@ -6,9 +6,8 @@ class gameUserInterface {
     return cardHTML;
   }
   getCardImageURL(card) {
-    return "/cards/" + card.value + "_of_" + card.suit + ".svg";
+    return "cards/" + card.value + "_of_" + card.suit + ".svg";
   }
-  
 }
 
 var GUI = new gameUserInterface();

@@ -1,0 +1,92 @@
+{
+    "player1": {
+        "nickname": "Игрок 1",
+        "active": false,
+        "hand": {
+            "card1":null,
+            "card2":null
+        },
+        "money": 10000 
+    },
+    "player2": {
+        "nickname": "Игрок 2",
+        "active": false,
+        "hand": {
+            "card1":null,
+            "card2":null
+        },
+        "money": 10000 
+    },
+    "player3": {
+        "nickname": "Игрок 3",
+        "active": false,
+        "hand": {
+            "card1":null,
+            "card2":null
+        },
+        "money": 10000 
+    },
+    "player4": {
+        "nickname": "Игрок 4",
+        "active": false,
+        "hand": {
+            "card1":null,
+            "card2":null
+        },
+        "money": 10000 
+    },
+    "player5": {
+        "nickname": "Игрок 5",
+        "active": false,
+        "hand": {
+            "card1":null,
+            "card2":null
+        },
+        "money": 10000 
+    },
+    "player6": {
+        "nickname": "Игрок 6",
+        "active": false,
+        "hand": {
+            "card1":null,
+            "card2":null
+        },
+        "money": 10000 
+    },
+    "player7": {
+        "nickname": "Игрок 7",
+        "active": false,
+        "hand": {
+            "card1":null,
+            "card2":null
+        },
+        "money": 10000 
+    },
+    "player8": {
+        "nickname": "Игрок 8",
+        "active": false,
+        "hand": {
+            "card1":null,
+            "card2":null
+        },
+        "money": 10000 
+    },
+    "player9": {
+        "nickname": "Игрок 9",
+        "active": false,
+        "hand": {
+            "card1":null,
+            "card2":null
+        },
+        "money": 10000 
+    },
+    "player10": {
+        "nickname": "Игрок 10",
+        "active": false,
+        "hand": {
+            "card1":null,
+            "card2":null
+        },
+        "money": 10000 
+    }
+}

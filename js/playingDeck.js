@@ -87,6 +87,4 @@ class Deck {
   }
 }
 
-deck = new Deck();
-deck.generate_deck();
-deck.shuffle();
+module.exports.deck = new Deck();
